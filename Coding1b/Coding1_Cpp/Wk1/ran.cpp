@@ -31,7 +31,6 @@ int main() {
     // Set Variables 
         // the random number 
         int number = (rand() % 10 ) + 1; 
-        
         // the guess/input 
         int guess = -1; 
 
