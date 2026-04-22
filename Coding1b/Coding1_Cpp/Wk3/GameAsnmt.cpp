@@ -14,16 +14,17 @@ int main() {
 
     while (true) {
         cout << "\nAvailable commands:\n";
-        cout << "add\n";
-        cout << "edit\n"; 
-        cout << "remove\n"; 
-        cout << "show\n";
-        cout << "quit\n"; 
+        cout << "add\n";        //add in game
+        cout << "edit\n";       // edit game name 
+        cout << "remove\n";     // remove add games if they aren't needed 
+        cout << "show\n";       // show games that are in list
+        cout << "quit\n";       // quit game 
         cout << "Enter command: ";
 
         cin >> command;
 
         if (command == "add") {
+            // to add games in list
             cout << "Enter game name to add:";
             cin.ignore(); 
             string game; 
@@ -33,6 +34,7 @@ int main() {
         }
 
         else if (command == "edit") {
+            // edit name of the games added 
             cout << "Enter name of the game to edit.:"; 
             cin.ignore(); 
             string oldName; 
@@ -52,6 +54,7 @@ int main() {
         }
 
         else if (command == "remove") {
+            // remove unwanted games from list
             cout << "Enter the name og the game to remove"; 
             cin.ignore(); 
             string name; 
@@ -68,6 +71,7 @@ int main() {
         }
 
         else if (command == "show") {
+            // show list of games added in 
             if (games.empty()) {
                 cout << "No games in the list.\n";
             } else {
@@ -78,14 +82,15 @@ int main() {
                 }
             }
         }
-
+        // command to quit program
+        //message Goodbyeeeeeee
         else if (command == "quit") {
             cout << "Goodbye!!!\n";
             break;
         }
         
         else {
-            cout << "Unknown command";
+            cout << "Unknown command";      // for any weird command lol
         }
     }
 
